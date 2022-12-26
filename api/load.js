@@ -38,7 +38,7 @@ function loadWithRetry() {
     }));
   
     promises.push(new Promise((resolve, reject)=>{
-      insert(db.collection('watching'), "./data/watching.json", resolve, reject);
+      insert(db.collection('movies'), "./data/watching.json", resolve, reject);
     }));
   
     Promise.all(promises)
